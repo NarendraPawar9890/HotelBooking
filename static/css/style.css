@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("/static/images/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0,0,0,0.7);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    color: white;
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Main Section */
+.hero {
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+}
+
+.section {
+    background: rgba(255,255,255,0.9);
+    margin: 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Rooms */
+.rooms {
+    display: flex;
+    justify-content: space-around;
+}
+
+.room {
+    text-align: center;
+}
+
+.room img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+}
+

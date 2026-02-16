@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Bookings</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+
+    <h2>Hotel Paradise</h2>
+
+    <div>
+        <a href="/home">Home</a>
+        <a href="/rooms">Book Room</a>
+        <a href="/mybookings">My Booking</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+</div>
+
+
+<div class="section">
+
+    <h2>My Bookings</h2>
+
+    <table border="1" width="100%">
+
+        <tr>
+            <th>Room</th>
+            <th>Price</th>
+            <th>Date</th>
+        </tr>
+
+        {% for booking in bookings %}
+
+        <tr>
+            <td>{{ booking.room.name }}</td>
+            <td>₹{{ booking.room.price }}</td>
+            <td>{{ booking.date }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+</html>
