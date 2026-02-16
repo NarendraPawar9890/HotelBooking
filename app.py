@@ -12,7 +12,7 @@ def create_app():
     app.config["SECRET_KEY"] = "hotelprojectsecret"
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
 
-    # Init extensions
+
     db.init_app(app)
     login_manager.init_app(app)
 
@@ -89,7 +89,6 @@ def create_app():
     from flask_login import current_user
 
 
-    # Show Rooms
     @app.route("/rooms")
     @login_required
     def rooms():
@@ -98,8 +97,6 @@ def create_app():
 
         return render_template("rooms.html", rooms=all_rooms)
 
-
-    # Book Room
     @app.route("/book/<int:room_id>", methods=["GET", "POST"])
     @login_required
     def book(room_id):
@@ -126,7 +123,6 @@ def create_app():
         return render_template("book.html", room=room)
 
 
-    # My Bookings
     @app.route("/mybookings")
     @login_required
     def mybookings():
@@ -144,7 +140,6 @@ def create_app():
     return app
 
 
-# Run App
 app = create_app()
 
 if __name__ == "__main__":

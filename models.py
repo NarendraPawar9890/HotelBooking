@@ -2,7 +2,7 @@ from flask_login import UserMixin
 from extensions import db
 
 
-# User Table
+
 class User(db.Model, UserMixin):
 
     id = db.Column(db.Integer, primary_key=True)
@@ -16,7 +16,7 @@ class User(db.Model, UserMixin):
     bookings = db.relationship("Booking", backref="user")
 
 
-# Room Table
+
 class Room(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
@@ -30,7 +30,7 @@ class Room(db.Model):
     bookings = db.relationship("Booking", backref="room")
 
 
-# Booking Table
+
 class Booking(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
